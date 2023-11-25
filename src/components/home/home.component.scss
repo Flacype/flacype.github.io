@@ -1,0 +1,37 @@
+.background {
+    background-image: url('../../assets/img/placeholder.jpg'); // TODO REMPLACER LE PLACEHOLDER
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a.flip-animate {
+  span {
+    display: inline-block;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+  }
+  
+  span:before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0;
+  }
+  
+  &:hover span,
+  &:focus span {
+    transform: rotateX(90deg) translateY(-22px);
+  }
+
+  .swap-text {
+    content: attr(data-hover);
+    transform: rotateX(90deg) translateY(-22px);
+  }
+}
+
+h1 {
+    font-family: "Ubuntu_Condensed";
+}

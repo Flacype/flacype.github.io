@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+// Tailwind imports
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Fonts imports
+@font-face {
+    font-family: Ubuntu_Condensed;
+    src: url(assets/fonts/Ubuntu_Condensed/UbuntuCondensed-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,9 @@
+<div class="w-full h-screen bg-gray-700 flex flex-col">
+    <div class="w-1/5 text-red-800 flex flex-row content-between cursor-pointer" (click)="navigateTo('/home')">
+        <h1> < </h1>
+        <h1>Retourner à l'accueil</h1>
+    </div>
+     <div class="w-full flex flex-col justify-center text-center items-center">
+        <ngx-extended-pdf-viewer [src]="'../../assets/files/CV_Vretman.pdf'"></ngx-extended-pdf-viewer>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="w-full h-screen flex flex-row pl-3 md:pl-0 md:justify-center background overflow-hidden" (touchmove)="onScrollEvent($event)">
+  <div class="xl:w-1/2 md:w-3/4 w-1/10 py-60 items-center text-5xl md:text-7xl">
+    <h1>
+      <a class="flip-animate cursor-pointer" (click)="navigateTo('/about-me')">
+        <span class="w-full" #spanElement data-hover="Qui suis-je ?">Maxence Vretman</span>
+      </a>
+    </h1>
+    <h1>
+      <a class="flip-animate cursor-pointer mt-10 md:mt-0" (click)="navigateTo('/cv')">
+        <span #spanElement data-hover="Découvrir mon CV">Développeur Fullstack</span>
+      </a>
+    </h1>
+  </div>
+</div>
