@@ -1,9 +1,29 @@
 <div class="w-full h-screen bg-gray-700 flex flex-col">
-    <div class="w-1/5 text-red-800 flex flex-row content-between cursor-pointer" (click)="navigateTo('/home')">
-        <h1> < </h1>
-        <h1>Retourner à l'accueil</h1>
+    <div class="w-1/4 text-red-800 flex flex-row content-between cursor-pointer text-3xl mt-2" >
+
     </div>
-     <div class="w-full flex flex-col justify-center text-center items-center">
-        <ngx-extended-pdf-viewer [src]="'../../assets/files/CV_Vretman.pdf'"></ngx-extended-pdf-viewer>
+     <div class="w-full flex flex-col justify-center text-center items-center h-full">
+        <div class="flex flex-row mt-5">
+            <a (click)="navigateTo('/home')">
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+                        <path d="M39.5,43h-9c-1.381,0-2.5-1.119-2.5-2.5v-9c0-1.105-0.895-2-2-2h-4c-1.105,0-2,0.895-2,2v9c0,1.381-1.119,2.5-2.5,2.5h-9	C7.119,43,6,41.881,6,40.5V21.413c0-2.299,1.054-4.471,2.859-5.893L23.071,4.321c0.545-0.428,1.313-0.428,1.857,0L39.142,15.52	C40.947,16.942,42,19.113,42,21.411V40.5C42,41.881,40.881,43,39.5,43z"></path>
+                    </svg>
+                    <h1>Retour à l'accueil</h1>
+                </button>
+            </a>
+    
+            <a class="ml-2" href="../../assets/files/CV_Vretman.pdf" download="CV_Vretman.pdf">
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                    <h1>Télécharger mon CV</h1>
+                </button>
+            </a>
+        </div>
+
+        <iframe src="../../assets/files/CV_Vretman.pdf#toolbar=0" class="w-1/2 hidden md:flex md:h-full mt-5"></iframe>
+        <div class="flex md:hidden mt-20">
+            <h1>L'aperçu du CV n'est pas disponible pour votre appareil, essayez sur un appareil avec un plus grand écran, ou téléchargez le en utilisant le bouton ci-dessus</h1>
+        </div>
     </div>
 </div>
